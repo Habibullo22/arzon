@@ -20,7 +20,7 @@ def start(message):
     user_balances.setdefault(user_id, 1000)
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     markup.add('Balance', 'Play Mines')
-    markup.add('Play Aviator', 'hisob to'ldirish')
+    markup.add('Play Aviator', 'hisob toldirish')
     bot.send_message(message.chat.id, "Xush kelibsiz! O'yinni tanlang:", reply_markup=markup)
 
 @bot.message_handler(func=lambda m: m.text == "Balance")
@@ -122,7 +122,7 @@ def handle_callback(call):
         game['multiplier'] *= 1.08
         send_mines_board(call.message.chat.id, user_id, bomb_triggered=False)
 
-@bot.message_handler(func=lambda m: m.text == "hisob to'ldirish")
+@bot.message_handler(func=lambda m: m.text == "hisob toldirish")
 def pay(message):
     if message.from_user.id != ADMIN_ID:
         bot.send_message(message.chat.id, "shu odamga murojat qilinglar @for_X_bott")
